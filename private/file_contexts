@@ -134,6 +134,7 @@
 /dev/hwbinder		u:object_r:hwbinder_device:s0
 /dev/input(/.*)?	u:object_r:input_device:s0
 /dev/iio:device[0-9]+   u:object_r:iio_device:s0
+/dev/ion		u:object_r:ion_device:s0
 /dev/keychord   u:object_r:keychord_device:s0
 /dev/loop-control	u:object_r:loop_control_device:s0
 /dev/modem.*		u:object_r:radio_device:s0
@@ -898,6 +899,18 @@
 # efs files
 #
 /efs(/.*)?		u:object_r:efs_file:s0
+/cpefs(/.*)?		u:object_r:efs_file:s0
+/prism(/.*)?		u:object_r:system_file:s0
+/optics(/.*)?		u:object_r:vendor_file:s0
+/optics/configs(/.*)?	u:object_r:vendor_configs_file:s0
+/omr			u:object_r:rootfs:s0
+/spu			u:object_r:rootfs:s0
+/keyrefuge		u:object_r:rootfs:s0
+/persist		u:object_r:mnt_vendor_file:s0
+/firmware		u:object_r:rootfs:s0
+/bt_firmware		u:object_r:rootfs:s0
+/cust			u:object_r:rootfs:s0
+/metadata/dsu_logs(/.*)?	u:object_r:aconfig_storage_metadata_file:s0
 
 #############################
 # Cache files

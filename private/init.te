@@ -257,6 +257,7 @@ allow init configfs:{ file lnk_file } create_file_perms;
 
 # /metadata
 allow init metadata_file:dir mounton;
+allow init aconfig_storage_metadata_file:dir mounton;
 
 # Run restorecon on /dev
 allow init tmpfs:dir relabelfrom;

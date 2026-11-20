@@ -141,6 +141,8 @@ allow kernel {
   staging_data_file
   vendor_apex_file
 }:file read;
+allow kernel { vendor_file_type -vendor_app_file -vendor_overlay_file }:dir r_dir_perms;
+allow kernel { vendor_file_type -vendor_app_file -vendor_overlay_file }:file r_file_perms;
 # Also allow the kernel to read/write /data/local/tmp files via loop device
 # for ApexTestCases and fiemap_image_test.
 userdebug_or_eng(`
